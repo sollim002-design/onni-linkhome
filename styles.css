@@ -1,0 +1,64 @@
+:root{--paper:#F0F4FC;--ink:#172B50;--dark:#0A1224;--gold:#3478FF;--gold-light:#8CB9FF;--muted:#52647F;--line:rgba(10,18,36,.2);--royal:#172B50}
+*{box-sizing:border-box}html{min-width:320px}body{margin:0;min-height:100vh;color:var(--ink);background:var(--paper);font-family:"Gowun Dodum","Apple SD Gothic Neo",sans-serif}
+button,a{-webkit-tap-highlight-color:transparent}
+.noise{position:fixed;inset:0;z-index:3;pointer-events:none;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E")}
+.site{width:min(1180px,100%);min-height:100vh;margin:auto;padding:28px 42px 30px;position:relative}
+.masthead{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:17px}
+.wordmark{display:inline-flex;align-items:center;gap:10px;color:var(--dark);font:700 15px/1 "Outfit",sans-serif;letter-spacing:.08em;text-decoration:none}
+.wordmark .wordmark-logo{width:40px;height:40px;object-fit:cover;border-radius:50%;background:#fff}
+.wordmark span{color:var(--dark);margin:0}
+.share{display:flex;gap:12px;align-items:center;border:1px solid var(--line);border-radius:999px;padding:8px 10px 8px 15px;color:var(--dark);background:transparent;cursor:pointer;font:600 11px "Outfit",sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.share b{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;color:var(--paper);background:var(--dark);font-size:15px}.share:hover{background:var(--royal)}
+.layout{display:grid;grid-template-columns:minmax(360px,.9fr) minmax(440px,1.1fr);gap:clamp(44px,9vw,140px);align-items:start;padding:58px 5.5% 76px}
+.eyebrow{margin:0 0 17px;color:var(--muted);font:600 10px "Outfit",sans-serif;letter-spacing:.22em;text-transform:uppercase}
+.portrait-wrap{position:relative;display:grid;place-items:center;width:min(340px,100%);height:340px;margin:0 0 28px;overflow:hidden;border-radius:3px;background:#000}
+.portrait{display:block;width:100%;height:100%;padding:0;object-fit:contain;object-position:center;border:0;background:#000;transform:scale(1.06)}
+h1{margin:0;color:var(--dark);font:600 clamp(38px,5.5vw,68px)/.97 "Outfit",sans-serif;letter-spacing:-.06em}
+h1 em{color:var(--gold);font-style:normal}.name-korean{display:inline-block;font-size:.72em;letter-spacing:-.05em}.name-english{display:inline-block;font-size:1.16em}
+.role-pills{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin:24px 0 28px}
+.role-row{display:flex;align-items:center;gap:8px;white-space:nowrap}
+.role-pill{display:inline-flex;align-items:center;gap:7px;min-height:36px;padding:8px 11px;border:1px solid var(--gold);border-radius:999px;color:var(--dark);background:rgba(255,255,255,.5)}
+.role-pill span{color:var(--gold);font:700 9px/1 "Outfit",sans-serif;letter-spacing:.1em}.role-pill strong{color:var(--dark);font:600 11px/1.1 "Outfit",sans-serif;letter-spacing:.01em}
+.role-pill--primary{border-color:var(--gold);background:var(--gold)}.role-pill--primary span{color:#fff}.role-pill--primary strong{color:var(--dark)}
+.tagline{color:var(--dark);font-size:20px;line-height:1.55;font-weight:600;margin:28px 0 0}
+.intro-copy{margin:25px 0 26px;color:var(--muted);font-size:16px;line-height:1.9}
+.studio{align-self:start;padding-top:0}.studio-heading{display:flex;align-items:end;justify-content:space-between;margin-bottom:21px}
+.studio-heading h2{margin:0;color:var(--dark);font:600 clamp(26px,3vw,40px)/1 "Outfit",sans-serif;letter-spacing:-.05em}
+.link-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.link-card{display:flex;flex-direction:column;justify-content:space-between;min-width:0;min-height:155px;padding:18px 18px 15px;border:1px solid var(--line);border-radius:3px;color:var(--dark);background:rgba(255,255,255,.55);text-align:left;text-decoration:none;font-family:inherit;cursor:pointer;transition:transform .25s ease,color .25s ease,background .25s ease,box-shadow .25s ease}
+.link-card:nth-child(2){background:#2864D2;color:var(--paper)}.link-card:nth-child(3){background:#C9D5E7}
+.link-card:hover{z-index:1;color:var(--dark);background:#dfeaff;box-shadow:8px 8px 0 var(--gold-light);transform:translate(-3px,-5px)}
+.link-card:nth-child(2):hover{color:var(--paper);background:#2259BF}
+.link-head{display:flex;justify-content:space-between;align-items:flex-start}.link-number{font:600 12px "Outfit",sans-serif;opacity:.7}
+.brand-icon{display:grid;place-items:center;width:40px;height:38px;border:1px solid currentColor;border-radius:10px;font:600 20px/1 "Outfit",sans-serif;overflow:hidden}
+.brand-icon.phone{color:var(--paper);background:var(--gold);border-color:var(--gold);font-size:20px}
+.brand-icon.home{width:76px;height:76px;flex:none;border:0;border-radius:50%;background:var(--paper)}
+.brand-logo{display:block;width:100%;height:100%;object-fit:contain}.grey-card-logo{padding:0;object-fit:cover;border-radius:50%;clip-path:circle(49% at 50% 50%)}
+.link-title{max-width:190px;margin-top:17px;font-size:18px;line-height:1.25}
+.link-caption{display:flex;justify-content:space-between;align-items:center;margin-top:19px;font:10px "Outfit",sans-serif;letter-spacing:.11em;text-transform:uppercase;opacity:.7}
+.link-caption b{font-size:20px;font-weight:400}
+.channel-card{justify-content:flex-start}.channel-card:hover{transform:none;box-shadow:none}
+.channel-list{display:flex;flex-direction:column;align-items:stretch;gap:8px;margin-top:18px}
+.channel-list a,.channel-list button{display:flex;align-items:center;gap:9px;min-height:36px;padding:0;border:0;background:transparent;color:inherit;font:600 14px/1.2 "Outfit","Gowun Dodum",sans-serif;text-align:left;text-decoration:none;cursor:pointer}
+.channel-list a:hover,.channel-list button:hover{text-decoration:underline;text-underline-offset:3px}
+.channel-list small{font-size:11px;font-weight:400;opacity:.8}.channel-icon{display:grid;place-items:center;flex:none;width:30px;height:30px;overflow:hidden;border-radius:7px;font:600 18px "Outfit",sans-serif}
+.channel-list .email-copy{align-items:flex-start;min-height:50px}.email-text{display:flex;flex-direction:column;gap:4px;min-width:0;overflow-wrap:anywhere;font-weight:400}.email-text small{display:block}
+.channel-icon img{display:block;width:100%;height:100%;object-fit:contain}
+.phone-icon,.mail-icon{border:1px solid currentColor}.instagram{background:linear-gradient(135deg,#833ab4,#c13584,#f77737);padding:6px}.x{background:#111;padding:7px}.youtube{background:transparent}
+.social-card .channel-list::after{content:"";display:block;height:36px;flex:none}
+.playlist-label{margin:34px 0 12px;color:var(--muted);font:600 10px "Outfit",sans-serif;letter-spacing:.22em;text-transform:uppercase}
+.playlist-links{border-top:1px solid var(--line)}.playlist-link{display:flex;align-items:center;justify-content:space-between;width:100%;min-height:72px;padding:0 2px;border-bottom:1px solid var(--line);color:var(--dark);font:500 17px/1.2 "Gowun Dodum",sans-serif;text-decoration:none;transition:color .2s ease,padding .2s ease}
+.playlist-link::after{content:"↗";margin-left:16px;font:400 28px/1 "Outfit",sans-serif}.playlist-link:hover{padding:0 10px;color:var(--gold-light)}
+.footer{display:block;width:100%;padding-top:17px;border-top:1px solid var(--line);color:var(--muted);font:10px "Outfit",sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.footer-brand{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;width:100%}.footer-brand>span{white-space:nowrap}
+.business-scroll{overflow-x:auto;margin-top:30px;padding-bottom:16px}
+.business-info{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;width:100%;min-width:max-content;gap:0;margin:0;text-align:left;text-transform:none;letter-spacing:0;font-family:"Gowun Dodum","Apple SD Gothic Neo",sans-serif}
+.business-info>div{min-width:0;padding:14px 12px 0 0}.business-info dt{color:var(--muted);font:600 10px/1.2 "Outfit",sans-serif;letter-spacing:.08em;margin-bottom:7px;white-space:nowrap}
+.business-info dd{margin:0;color:var(--ink);font-size:12px;line-height:1.5;white-space:nowrap}.business-info a{color:inherit;text-decoration:none}.business-info a:hover{text-decoration:underline}
+.toast{position:fixed;left:50%;bottom:25px;z-index:5;padding:11px 18px;border-radius:4px;color:var(--paper);background:var(--dark);box-shadow:0 9px 25px rgba(0,0,0,.3);opacity:0;transform:translate(-50%,12px);pointer-events:none;transition:.25s ease}.toast.show{opacity:1;transform:translate(-50%,0)}
+.cursor-note{position:fixed;z-index:4;pointer-events:none;color:var(--gold-light);font:var(--note-size)/1 "Gowun Dodum",sans-serif;text-shadow:0 1px 0 rgba(255,255,255,.35);transform:translate(-50%,-50%);animation:note-drift 1.05s ease-out forwards}
+@keyframes note-drift{0%{opacity:0;transform:translate(-50%,-50%) scale(.55) rotate(0deg)}18%{opacity:.95}100%{opacity:0;transform:translate(calc(-50% + var(--note-drift)),58px) scale(.92) rotate(var(--note-spin))}}
+:focus-visible{outline:2px solid var(--gold-light);outline-offset:3px}
+@media(max-width:800px){.site{padding:22px 22px 25px}.layout{grid-template-columns:1fr;gap:48px;padding:44px 4% 60px}.portrait-wrap{margin:0 0 28px}.studio{padding-top:0}}
+@media(max-width:520px){.site{padding:18px 16px 22px}.layout{padding:37px 0 50px;gap:45px}.portrait-wrap{width:min(100%,320px);height:320px}h1{font-size:43px}.intro-copy{font-size:16px}.link-grid{gap:9px}.link-card{min-height:145px;padding:14px 13px 12px}.link-title{font-size:15px}.footer{font-size:8px}.wordmark{font-size:13px;gap:7px}.wordmark .wordmark-logo{width:34px;height:34px}.channel-list a,.channel-list button{font-size:13px}.channel-list small{font-size:10px}.role-pills,.role-row{gap:6px}.role-pill{min-height:32px;padding:6px 8px;gap:5px}.role-pill strong{font-size:10px}.role-pill span{font-size:8px}.email-text{font-size:12px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
